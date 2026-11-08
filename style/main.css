@@ -283,6 +283,83 @@ a{
     margin-top: var(--space-16);
 }
 
+/* Footer Design ======================= */
+.footer{
+    display: block;
+    margin-top: var(--space-16);
+    background-color: var(--accent-light);
+    box-shadow: var(--shadow-lg);
+}
+.footerInner{
+    width: 100%;
+    max-width: var(--container-wide);
+    margin: 0 auto;
+    padding: var(--space-16) 15px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 4rem;
+}
+.footerLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.foorerHomes{
+    text-decoration: none;
+    width: max-content;
+}
+.footerBrand{
+    width: auto;
+    height: 30px;
+}
+.footerDesc{
+    display: block;
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    line-height: var(--leading-relaxed);
+}
+.footerOtherLinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footerRight{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+}
+.widgetTitle{
+    font-size: var(--text-lg);
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+.listItemWg{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.listItemWg li{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.listItemWg li a.itemWg{
+    color: var(--text-secondary) !important;
+    transition: var(--transition-normal);
+}
+.listItemWg li a.itemWg:hover{
+    color: var(--accent-hover) !important;
+}
+.footerBottom{
+    display: block;
+    text-align: center;
+    background-color: var(--accent);
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    padding: 10px;
+}
 
 
 /* Media Tablet Design ============= */
@@ -298,5 +375,8 @@ a{
     }
     .navMenus{
         display: none;
+    }
+    .footerInner{
+        grid-template-columns: 1fr;
     }
 }

@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import { getSiteConfig } from '@/src/libs/sites';
 import Header from '@/src/components/Header';
+import Footer from '@/src/components/Footer';
 
 import '../style/main.css';
 
@@ -15,6 +16,8 @@ export default function RootLayout({children}: {
   return(
     <html lang="en" suppressHydrationWarning>
       <head>
+      <link rel="shortcut icon" href={config.favicon} type="image/x-icon" />
+      <link rel="apple-touch-icon" href={config.favicon} />
         <link 
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -41,6 +44,7 @@ export default function RootLayout({children}: {
         <div className="container">
           { children }
         </div>
+        <Footer config={config} />
       </body>
     </html>
   )

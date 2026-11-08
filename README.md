@@ -6,7 +6,7 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
 - [ ] Main Theme
     - [x] Header
     - [ ] Home Page
-    - [ ] Footer
+    - [x] Footer
     - [ ] Error Page
 - [ ] Posts
     - [ ] List posts perpage
@@ -17,7 +17,7 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
         - [ ] Related Post
 - [ ] Web Pages
 - [ ] Standar SEO Website
-    - [ ] SEO Home Page
+    - [x] SEO Home Page
     - [ ] SEO Single Post
     - [ ] SEO Web Page
     - [ ] SEO Category
