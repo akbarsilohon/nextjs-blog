@@ -1,5 +1,5 @@
 ---
-siteName: "Silohon Next"
+siteName: "By Silohon"
 sparator: ""
 tagline: ""
 homeDesc: ""
@@ -21,4 +21,23 @@ navLinks:
       url: "/category/server"
       hex: "#10B981"
       icon: "fa-solid fa-server"
+flexboxMenus:
+  - name: "Home"
+    url: "/"
+    icon: "fa-regular fa-house"
+  - name: "Blog"
+    url: "#"
+    icon: "fa-solid fa-blog"
+    submenus:
+      - name: "Tutorials"
+        url: "/category/tutorials"
+      - name: "Snippets"
+        url: "/category/snippets"
+  - name: "Tools"
+    url: "/tools"
+    icon: "fa-solid fa-wrench"
+    submenus: []
+  - name: "About"
+    url: "/about"
+    icon: "fa-solid fa-user"
 ---

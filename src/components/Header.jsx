@@ -63,7 +63,51 @@ export default function Header({config}){
                     </button>
                 </div>
             </header>
+            
             <div className="header_spacer"></div>
+
+            <div className={`flexboxMenu ${isOpen ? 'show' : ''}`} id="fexboxMenu">
+                <div className="flexboxHeader">
+                    <Link className="flextoHome" href="/">
+                        <Image
+                            src={config?.headerLogo}
+                            alt={config?.siteName}
+                            className="flexBrand"
+                            width={394}
+                            height={80}
+                            loading="eager"
+                        />
+                    </Link>
+
+                    <span className="menuClose" id="closeMenu" onClick={() => setIsOpen(false)}>
+                        <i className="fa-solid fa-xmark"></i>
+                    </span>
+                </div>
+
+                <div className="flexboxBody2">
+                    {config?.flexboxMenus?.map((menu, idx) => (
+                        <div key={idx} className="flexboxGroup">
+                            <Link href={menu.url || '#'} className="flexboxItem">
+                                {menu.icon && <i className={`${menu.icon}`}></i>}
+                                <span className="TextMenu">{menu.name}</span>
+                            </Link>
+
+                            { menu.submenus && menu.submenus.length > 0 && (
+                                <div className="submenuGroup">
+                                    {menu.submenus.map((sub, subIdx) => (
+                                        <Link key={subIdx} href={sub.url} className="submenuItem">
+                                            <i className="fa-solid fa-arrow-right-long"></i>
+                                            <span className="submenuName">
+                                                {sub.name}
+                                            </span>
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </div>
         </>
     )
 }
