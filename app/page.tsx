@@ -1,4 +1,7 @@
 import { getSiteConfig } from '@/src/libs/sites';
+import { checkPostsExists, getPostsLimit, getPostsByCategory } from '@/src/libs/posts';
+import Slider from '@/src/home/Slider';
+import '../style/home.css';
 
 export async function generateMetadata(){
   const config = getSiteConfig();
@@ -37,7 +40,22 @@ export async function generateMetadata(){
 }
 
 export default function Home() {
+  const hasPosts = checkPostsExists();
+  const dataSlider = getPostsLimit(6);
   return (
-    <h1>Halo</h1>
+    <>
+      { hasPosts
+        ?
+        <Slider dataSlider={dataSlider} />
+        :
+        <div className="nothingPosts">
+          <span className="emptyIcon">
+            <i className="fa-regular fa-pen-to-square"></i>
+          </span>
+          <h1 className="emptyTitle">Empty Blog Post</h1>
+          <p className="emptyText">Post empty, visit this blog another time.</p>
+        </div>
+      }
+    </>
   );
 }

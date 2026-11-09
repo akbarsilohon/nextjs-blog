@@ -6,6 +6,11 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
 - [ ] Main Theme
     - [x] Header
     - [ ] Home Page
+        - [ ] Slider
+        - [ ] Theme Style 1
+        - [ ] Theme Style 2
+        - [ ] Theme Style 3
+        - [ ] Theme Style 4
     - [x] Footer
     - [x] Error Page
 - [ ] Posts
@@ -24,3 +29,15 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
     - [ ] Sitemap Generator
 
 ## Theme Docs
+
+This theme using setting for Dinamic sidebar and Footer. You can custom for your Next.Js Blog.
+
+### Navbar Header
+Edit file config/sites.md and find navLinks. For Example:
+navLinks:
+    - name: "Menu name"
+      url: "/url-this-menu"
+      hex: "Font Awesome Icon Color"
+      icon: "Font Awesome Color"
+
+You can add 2 or more menu.

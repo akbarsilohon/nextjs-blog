@@ -280,7 +280,7 @@ a{
 }
 .header_spacer{
     display: block;
-    margin-top: var(--space-16);
+    margin-top: 5rem;
 }
 
 /* Footer Design ======================= */
