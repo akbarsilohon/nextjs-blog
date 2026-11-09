@@ -41,12 +41,11 @@ export async function generateMetadata(){
 
 export default function Home() {
   const hasPosts = checkPostsExists();
-  const dataSlider = getPostsLimit(6);
   return (
     <>
       { hasPosts
         ?
-        <Slider dataSlider={dataSlider} />
+        <Slider dataSlider={getPostsLimit(6)} />
         :
         <div className="nothingPosts">
           <span className="emptyIcon">

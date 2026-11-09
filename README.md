@@ -6,7 +6,7 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
 - [ ] Main Theme
     - [x] Header
     - [ ] Home Page
-        - [ ] Slider
+        - [x] Slider
         - [ ] Theme Style 1
         - [ ] Theme Style 2
         - [ ] Theme Style 3

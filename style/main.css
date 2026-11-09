@@ -280,7 +280,7 @@ a{
 }
 .header_spacer{
     display: block;
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 
 /* Footer Design ======================= */
@@ -416,5 +416,11 @@ a{
     }
     .footerInner{
         grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:580px){
+    .header_spacer{
+        margin-top: 5rem;
     }
 }

@@ -17,8 +17,13 @@ function getPostMetadata(filename) {
     const filePath = path.join(postsDirectory, filename);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data } = matter(fileContent);
+    
+    // Menambahkan penanganan slug: Prioritas dari frontmatter data.slug, 
+    // jika tidak ada maka otomatis mengambil dari nama file (tanpa ekstensi .md)
+    const fileSlug = filename.replace(/\.md$/, '');
+
     return {
-        slug: filename.replace(/\.md$/, ''),
+        slug: data.slug || fileSlug,
         ...data,
     };
 }
