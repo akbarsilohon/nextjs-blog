@@ -1,9 +1,9 @@
 ---
-siteName: "By Silohon"
+siteName: "Silohon Next"
 sparator: "|"
-baseUrl: "https://silohon.com"
-tagline: "Beauty Next.Js Theme"
-homeDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966."
+baseUrl: "https://silohon.vercel.app"
+tagline: "BLog Kesehatan dan Manfaat"
+homeDesc: "Dapatkan update terbaru tentang artikel kesehatan dan manfaat apa saja yang ada di sekitar kamu."
 headerLogo: "/next.svg"
 ogImage: "/next.svg"
 favicon: "/favicon.ico"
@@ -46,7 +46,7 @@ flexboxMenus:
     icon: "fa-solid fa-user"
 siteFooter:
   logoFooter: "/next.svg"
-  footerDesc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966."
+  footerDesc: "Dapatkan update terbaru tentang artikel kesehatan dan manfaat apa saja yang ada di sekitar kamu."
   otherLinks:
     - name: "Instagram"
       url: "https://www.instagram.com"
