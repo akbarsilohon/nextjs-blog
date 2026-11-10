@@ -142,12 +142,15 @@ a{
     color: var(--accent-hover);
     font-weight: 600;
 }
-.sideMode{
+.actionHeader{
     border: none;
     background-color: transparent;
-    color: var(--accent-hover);
+    color: var(--bg-primary);
     cursor: pointer;
-    font-size: 18px;
+    font-size: var(--text-xs);
+    background-color: var(--accent-hover);
+    padding: 5px 15px;
+    border-radius: var(--radius-sm);
 }
 
 /* Flexbox Menu */

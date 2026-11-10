@@ -1,31 +1,16 @@
-# Next.js Beauty Theme for Blogging
-
-This Next.js theme uses 100% custom CSS written entirely by myself, with no external CSS framework assistance like Tailwind CSS or Bootstrap CSS. I simply prefer building my own designs—not because my design is inherently better than theirs, but because I want absolute creative freedom over the styling structure, lightweight performance, and the pure enjoyment of crafting every single line of CSS from scratch.
-
-## Progres this Project Theme
-- [x] Main Theme
-    - [x] Header
-    - [x] Home Page
-        - [x] Slider
-        - [x] Theme One
-        - [x] Theme Two
-        - [x] Theme Three
-        - [x] Theme Four
-    - [x] Footer
-    - [x] Error Page
 - [ ] Posts
     - [x] List posts perpage
-    - [ ] Post by category
+    - [x] Post by category
     - [ ] Single Post
-        - [ ] Main Post
-        - [ ] Sidebar
+        - [x] Main Post
+        - [x] Sidebar
         - [ ] Related Post
 - [ ] Web Pages
 - [ ] Standar SEO Website
     - [x] SEO Home Page
-    - [ ] SEO Single Post
+    - [x] SEO Single Post
     - [ ] SEO Web Page
-    - [ ] SEO Category
+    - [x] SEO Category
     - [ ] Sitemap Generator
 
 ## Theme Docs
@@ -41,3 +26,18 @@ navLinks:
       icon: "Font Awesome Color"
 
 You can add 2 or more menu.
+
+### Writing Articles (Markdown Guide)
+To write a new blog post, create a `.md` file inside the `posts/` directory with the following frontmatter and formatting standards:
+
+#### 1. Frontmatter Structure
+```markdown
+---
+title: "Your Post Title Here"
+slug: "your-post-url-slug"
+date: "2026-11-11T10:00:00Z"
+category: "Category Name"
+description: "Short summary or excerpt of your post for SEO."
+thumbnail: "your thubmbail url"
+---
+```

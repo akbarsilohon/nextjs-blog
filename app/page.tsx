@@ -55,9 +55,9 @@ export default function Home() {
           <div className="withSidebar">
             <div className="mainHome">
               <ThemeOne category={getPostsByCategory('Kesehatan', 7)} />
-              <ThemeTwo category={getPostsByCategory('Kesehatan', 8)} />
-              <ThemeThree category={getPostsByCategory('Kesehatan', 8)} />
-              <ThemeFour category={getPostsByCategory('Kesehatan', 8)} />
+              <ThemeTwo category={getPostsByCategory('hidup-sehat', 8)} />
+              <ThemeThree category={getPostsByCategory('Keluarga', 8)} />
+              <ThemeFour category={getPostsByCategory('Herbal', 8)} />
 
               <Link href="/blog" className="gotoBlog">
                 Goto Blog

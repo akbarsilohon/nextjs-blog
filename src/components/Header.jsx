@@ -3,24 +3,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Header({config}){
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
-
-    const [theme, setTheme] = useState('light');
-    useEffect(() => {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-        setTheme(currentTheme);
-    }, []);
-
-    const toggleTheme = () => {
-        const newTheme = theme === 'light' ? 'dark' : 'light';
-        setTheme(newTheme);
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    };
 
     return(
         <>
@@ -58,9 +45,9 @@ export default function Header({config}){
                         })}
                     </nav>
 
-                    <button type="button" className="sideMode" onClick={toggleTheme}>
-                        { theme === 'light' ? <i className="fa-solid fa-moon"></i> : <i className="fa-solid fa-sun"></i>}
-                    </button>
+                    <Link href="/blog" className="actionHeader">
+                        Blog
+                    </Link>
                 </div>
             </header>
             

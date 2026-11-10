@@ -1,6 +1,6 @@
 import React from 'react';
+import { Suspense } from 'react';
 import { Inter } from 'next/font/google';
-import Script from 'next/script';
 import { getSiteConfig } from '@/src/libs/sites';
 import Header from '@/src/components/Header';
 import Footer from '@/src/components/Footer';
@@ -24,23 +24,11 @@ export default function RootLayout({children}: {
           crossOrigin="anonymous" 
           referrerPolicy="no-referrer" 
         />
-        <Script
-          id="theme-switcher-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const storedTheme = localStorage.getItem('theme');
-                if (storedTheme === 'dark') {
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
       </head>
       <body className={`${inter.className}`} style={{ fontFamily: 'var(--font-sans)' }}>
-        <Header config={config} />
+        <Suspense fallback={null}>
+          <Header config={config} />
+        </Suspense>
         <div className="container">
           { children }
         </div>

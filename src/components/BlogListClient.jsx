@@ -15,7 +15,8 @@ function urlize(str) {
         .replace(/^-+|-+$/g, '');
 }
 
-export default function BlogListClient({ initialPosts }) {
+// Tambahkan parameter category di sini
+export default function BlogListClient({ initialPosts, category = null }) {
     const [posts, setPosts] = useState(initialPosts);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false);
@@ -25,7 +26,8 @@ export default function BlogListClient({ initialPosts }) {
         setLoading(true);
         try {
             const nextPage = page + 1;
-            const newPosts = await loadMorePostsAction(nextPage);
+            // Kirim category kalau ada (untuk halaman kategori)
+            const newPosts = await loadMorePostsAction(nextPage, category);
 
             if (!newPosts || newPosts.length === 0) {
                 setHasMore(false);
@@ -44,11 +46,13 @@ export default function BlogListClient({ initialPosts }) {
     return (
         <div className="blogListContainer">
             <div className="blog_header">
-                <span className="blog_heading">Blog Posts</span>
+                <span className="blog_heading">
+                    {category ? `${category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}` : 'Blog Posts'}
+                </span>
             </div>
 
             <div className="blogs_art">
-                { posts.map((post, index) => (
+                {posts.map((post, index) => (
                     <article key={index} className="blogCard">
                         <Link href={`/post/${post.slug}`} className="blogThumbLink">
                             <LazyImage
@@ -62,17 +66,26 @@ export default function BlogListClient({ initialPosts }) {
                         </Link>
                         <div className="blogContent">
                             <div className="blogFlex">
-                                <Link href={`/category/${urlize(post.category)}`} className="blogCat">
-                                    <i className="fa-solid fa-tag"></i>
-                                    {post.category}
-                                </Link>
-                                <span className="blogSparator">
-                                    <i className="fa-solid fa-angle-right"></i>
-                                </span>
-                                <time dateTime={post.date} className="blogTime">
-                                    <i className="fa-regular fa-calendar-days"></i>{" "}
-                                    {post.date ? post.date.substring(0, 10) : ''}
-                                </time>
+                                { category ? (
+                                    <time dateTime={post.date} className="blogTime">
+                                        <i className="fa-regular fa-calendar-days"></i>{" "}
+                                        {post.date ? post.date.substring(0, 10) : ''}
+                                    </time>
+                                ) : (
+                                    <>
+                                        <Link href={`/category/${urlize(post.category)}`} className="blogCat">
+                                            <i className="fa-solid fa-tag"></i>
+                                            {post.category}
+                                        </Link>
+                                        <span className="blogSparator">
+                                            <i className="fa-solid fa-angle-right"></i>
+                                        </span>
+                                        <time dateTime={post.date} className="blogTime">
+                                            <i className="fa-regular fa-calendar-days"></i>{" "}
+                                            {post.date ? post.date.substring(0, 10) : ''}
+                                        </time>
+                                    </>
+                                )}
                             </div>
                             <Link href={`/post/${post.slug}`} className="blogTitleLink">
                                 <h2>{post.title}</h2>
@@ -85,7 +98,7 @@ export default function BlogListClient({ initialPosts }) {
                 ))}
             </div>
 
-            { hasMore && (
+            {hasMore && (
                 <div className="loadMoreWrapper">
                     <button onClick={handleLoadMore} disabled={loading} className="loadMoreButton">
                         {loading ? 'Memuat...' : 'Load More'}
