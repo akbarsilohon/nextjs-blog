@@ -14,7 +14,7 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
     - [x] Footer
     - [x] Error Page
 - [ ] Posts
-    - [ ] List posts perpage
+    - [x] List posts perpage
     - [ ] Post by category
     - [ ] Single Post
         - [ ] Main Post

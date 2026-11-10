@@ -71,3 +71,13 @@ export function getPostBySlug(slug) {
         content,
     };
 }
+
+export function getPostsByPage(limitCount = 10, offset = 0) {
+    const files = getPostFiles();
+    const posts = files.map((file) => {
+        return getPostMetadata(file);
+    });
+    
+    return sortPostsByDate(posts)
+        .slice(offset, offset + limitCount);
+}
