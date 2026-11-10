@@ -7,10 +7,10 @@ This Next.js theme uses 100% custom CSS written entirely by myself, with no exte
     - [x] Header
     - [ ] Home Page
         - [x] Slider
-        - [ ] Theme Style 1
-        - [ ] Theme Style 2
-        - [ ] Theme Style 3
-        - [ ] Theme Style 4
+        - [x] Theme One
+        - [ ] Theme Two
+        - [ ] Theme Three
+        - [ ] Theme Four
     - [x] Footer
     - [x] Error Page
 - [ ] Posts

@@ -98,7 +98,7 @@ rem Create Markdown file
     echo date: "!date_today!"
     echo category: "!category!"
     echo description: ""
-    echo thumbnail: ""
+    echo thumbnail: "/uploads/posts/"
     echo ---
     echo.
 ) > "!filepath!"
@@ -184,7 +184,7 @@ rem Create Markdown page
     echo title: "!title!"
     echo date: "!date_today!"
     echo description: ""
-    echo thumbnail: ""
+    echo thumbnail: "/uploads/pages/"
     echo ---
     echo.
 ) > "!filepath!"

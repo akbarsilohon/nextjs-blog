@@ -1,6 +1,7 @@
 import { getSiteConfig } from '@/src/libs/sites';
 import { checkPostsExists, getPostsLimit, getPostsByCategory } from '@/src/libs/posts';
 import Slider from '@/src/home/Slider';
+import ThemeOne from '@/src/home/ThemeOne';
 import '../style/home.css';
 
 export async function generateMetadata(){
@@ -45,7 +46,15 @@ export default function Home() {
     <>
       { hasPosts
         ?
-        <Slider dataSlider={getPostsLimit(6)} />
+        <>
+          <Slider dataSlider={getPostsLimit(6)} />
+          <div className="withSidebar">
+            <div className="mainHome">
+              <ThemeOne category={getPostsByCategory('Kesehatan', 9)} />
+            </div>
+            <div className="homeSidebar"></div>
+          </div>
+        </>
         :
         <div className="nothingPosts">
           <span className="emptyIcon">
