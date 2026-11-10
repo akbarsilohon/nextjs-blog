@@ -3,14 +3,14 @@
 This Next.js theme uses 100% custom CSS written entirely by myself, with no external CSS framework assistance like Tailwind CSS or Bootstrap CSS. I simply prefer building my own designs—not because my design is inherently better than theirs, but because I want absolute creative freedom over the styling structure, lightweight performance, and the pure enjoyment of crafting every single line of CSS from scratch.
 
 ## Progres this Project Theme
-- [ ] Main Theme
+- [x] Main Theme
     - [x] Header
-    - [ ] Home Page
+    - [x] Home Page
         - [x] Slider
         - [x] Theme One
-        - [ ] Theme Two
-        - [ ] Theme Three
-        - [ ] Theme Four
+        - [x] Theme Two
+        - [x] Theme Three
+        - [x] Theme Four
     - [x] Footer
     - [x] Error Page
 - [ ] Posts

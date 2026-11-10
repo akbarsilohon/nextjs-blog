@@ -1,7 +1,11 @@
 import { getSiteConfig } from '@/src/libs/sites';
+import Link from 'next/link';
 import { checkPostsExists, getPostsLimit, getPostsByCategory } from '@/src/libs/posts';
 import Slider from '@/src/home/Slider';
 import ThemeOne from '@/src/home/ThemeOne';
+import ThemeTwo from '@/src/home/ThemeTwo';
+import ThemeThree from '@/src/home/ThemeThree';
+import ThemeFour from '@/src/home/ThemeFour';
 import '../style/home.css';
 
 export async function generateMetadata(){
@@ -47,12 +51,23 @@ export default function Home() {
       { hasPosts
         ?
         <>
-          <Slider dataSlider={getPostsLimit(6)} />
+          <Slider dataSlider={getPostsLimit(3)} />
           <div className="withSidebar">
             <div className="mainHome">
-              <ThemeOne category={getPostsByCategory('Kesehatan', 9)} />
+              <ThemeOne category={getPostsByCategory('Kesehatan', 7)} />
+              <ThemeTwo category={getPostsByCategory('Kesehatan', 8)} />
+              <ThemeThree category={getPostsByCategory('Kesehatan', 8)} />
+              <ThemeFour category={getPostsByCategory('Kesehatan', 8)} />
+
+              <Link href="/blog" className="gotoBlog">
+                Goto Blog
+              </Link>
             </div>
-            <div className="homeSidebar"></div>
+            <div className="homeSidebar">
+              <div className="adsStiky">
+                Your Adsense
+              </div>
+            </div>
           </div>
         </>
         :

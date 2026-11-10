@@ -1,5 +1,5 @@
 ---
-title: "10 Rekomendasi Minyak Kelapa Terbaik untuk Berbagai Kebutuhan Yang Pernah Ada di Dunia Ini Bray"
+title: "10 Rekomendasi Minyak Kelapa Terbaik untuk Berbagai Kebutuhan"
 date: "2026-11-09T22:31:43+07:00"
 category: "Kesehatan"
 description: "Minyak kelapa terbaik bisa menjadi pilihan untuk melengkapi kebutuhan sehari-hari, mulai dari memasak hingga perawatan tubuh. Namun, setiap produk memiliki karakteristik dan kegunaan yang berbeda-beda, ya."

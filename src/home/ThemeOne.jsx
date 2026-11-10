@@ -1,4 +1,3 @@
-'use client';
 import LazyImage from "@/src/components/LazyImage";
 import Link from "next/link";
 

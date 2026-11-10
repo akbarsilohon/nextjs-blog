@@ -20,7 +20,7 @@ export default function LazyImage({ src, alt, className, width, height, priority
                 }
             },
             {
-                rootMargin: '-50px 0px',
+                rootMargin: '-100px 0px',
             }
         );
 
