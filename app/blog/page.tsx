@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation';
 import { getSiteConfig } from '@/src/libs/sites';
 import { getPostsByPage } from '@/src/libs/posts';
 import BlogListClient from '@/src/components/BlogListClient';
@@ -17,9 +18,14 @@ export async function generateMetadata(){
 
 export default function BlogPage(){
     const initialPosts = getPostsByPage(10, 0);
+
     return (
         <section className="blogPostWith_Sidebar">
-            <BlogListClient initialPosts={initialPosts} />
+            {initialPosts && initialPosts.length > 0 ? (
+                <BlogListClient initialPosts={initialPosts} />
+            ) : (
+                <p>Empty.</p>
+            )}
             <div className="blogSidebar">
                 <div className="blogAdsStiky">
                     Your Adsense

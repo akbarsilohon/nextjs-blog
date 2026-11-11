@@ -16,8 +16,8 @@ export default function RootLayout({children}: {
   return(
     <html lang="en" suppressHydrationWarning>
       <head>
-      <link rel="shortcut icon" href={config.favicon} type="image/x-icon" />
-      <link rel="apple-touch-icon" href={config.favicon} />
+        <link rel="shortcut icon" href={config.favicon} type="image/x-icon" />
+        <link rel="apple-touch-icon" href={config.favicon} />
         <link 
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
