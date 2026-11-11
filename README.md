@@ -1,7 +1,7 @@
 - [ ] Posts
     - [x] List posts perpage
     - [x] Post by category
-    - [ ] Single Post
+    - [x] Single Post
         - [x] Main Post
         - [x] Sidebar
         - [x] Related Post
