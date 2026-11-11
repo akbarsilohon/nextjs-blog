@@ -77,7 +77,7 @@ siteFooter:
     - name: "Support"
       items:
         - name: "About Me"
-          url: "/about"
+          url: "/p/about"
         - name: "Contact"
           url: "/contact"
         - name: "Privacy Policy"

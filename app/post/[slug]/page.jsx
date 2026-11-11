@@ -17,12 +17,12 @@ export async function generateMetadata({ params }) {
 
     if (!post) {
         return {
-            title: `Artikel Tidak Ditemukan ${config.separator || '-'} ${config.siteName}`,
+            title: `Not Found ${config.sparator || '-'} ${config.siteName}`,
         };
     }
 
     return {
-        title: `${post.title} ${config.separator || '-'} ${config.siteName}`,
+        title: `${post.title} ${config.sparator || '-'} ${config.siteName}`,
         description: post.description || post.summary || '',
         alternates: {
             canonical: `${baseUrl}/post/${resolvedParams.slug}`,
