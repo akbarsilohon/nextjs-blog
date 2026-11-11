@@ -103,3 +103,16 @@ export function getPostsByPage(limitCount = 10, offset = 0) {
     const posts = getAllPosts();
     return posts.slice(offset, offset + limitCount);
 }
+
+export function getRelatedPostsByCategory(category, limit = 3, skippedSlug = null){
+    if (!category) return [];
+    const allPosts = getAllPosts();
+    const filteredPosts = allPosts.filter( post => {
+        const matchCategory = post.category && 
+            post.category.toLowerCase().trim() === category.toLowerCase().trim();
+        const isNotCurrentPost = skippedSlug ? post.slug !== skippedSlug : true;
+        return matchCategory && isNotCurrentPost;
+    });
+
+    return filteredPosts.slice(0, limit);
+}

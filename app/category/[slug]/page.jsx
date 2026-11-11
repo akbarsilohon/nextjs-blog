@@ -24,9 +24,16 @@ export async function generateMetadata({ params }) {
 
 export default function CategoryPage({ params }) {
     return (
-        <Suspense fallback={<p>Category Loaded...</p>}>
-            <CategoryContent params={params} />
-        </Suspense>
+        <section className="blogPostWith_Sidebar">
+            <Suspense fallback={<CategorySuspense />}>
+                <CategoryContent params={params} />
+            </Suspense>
+            <div className="blogSidebar">
+                <div className="blogAdsStiky">
+                    Your Adsense
+                </div>
+            </div>
+        </section>
     );
 }
 
@@ -39,13 +46,41 @@ async function CategoryContent({ params }) {
     }
 
     return (
-        <section className="blogPostWith_Sidebar">
-            <BlogListClient initialPosts={initialPosts} category={slug} />
-            <div className="blogSidebar">
-                <div className="blogAdsStiky">
-                    Your Adsense
-                </div>
+        <BlogListClient initialPosts={initialPosts} category={slug} />
+    );
+}
+
+async function CategorySuspense() {
+    return (
+        <div className="blogListContainer">
+            <div className="blog_header">
+                <span className="cat_suspende suspande_heading"></span>
             </div>
-        </section>
+
+            <div className="blogs_art">
+                { Array.from({ length: 5 }).map((_, index) => (
+                    <div key={index} className="blogCard">
+                        <div className="blogThumbLink cat_suspende"></div>
+                        <div className="blogContent">
+                            <div className="blogFlex">
+                                <span className="cat_suspende suspande_heading"></span>
+                                <span className="cat_suspende suspande_heading"></span>
+                            </div>
+
+                            <div className="suspande_flxc">
+                                <span className="cat_suspende suspande_fss_100"></span>
+                                <span className="cat_suspende suspande_fss_40"></span>
+                            </div>
+
+                            <div className="suspande_flxx">
+                                <span className="cat_suspende suspande_desc_100"></span>
+                                <span className="cat_suspende suspande_desc_100"></span>
+                                <span className="cat_suspende suspande_desc_40"></span>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
     );
 }

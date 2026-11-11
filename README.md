@@ -4,7 +4,7 @@
     - [ ] Single Post
         - [x] Main Post
         - [x] Sidebar
-        - [ ] Related Post
+        - [x] Related Post
 - [ ] Web Pages
 - [ ] Standar SEO Website
     - [x] SEO Home Page
